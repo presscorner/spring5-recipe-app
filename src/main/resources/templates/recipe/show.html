@@ -76,8 +76,9 @@
                             <div class="col-md-3">
                                 <h5>URL:</h5>
                             </div>
-                            <div class="col-md-3">
-                                <p th:text="${recipe.url}">http://www.example.com</p>
+                            <div class="col-md-3"
+                                 style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis">
+                                <a th:href="${recipe.url}" target=_blank>http://www.simplyrecipes.com</a>
                             </div>
                         </div>
                     </div>
