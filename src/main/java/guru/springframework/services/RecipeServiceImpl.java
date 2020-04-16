@@ -57,4 +57,10 @@ public class RecipeServiceImpl implements RecipeService {
 
         return converter.convertFromEntity(savedRecipe);
     }
+
+    @Override
+    @Transactional
+    public RecipeCommand findCommandById(long l) {
+        return converter.convertFromEntity(findById(l));
+    }
 }
