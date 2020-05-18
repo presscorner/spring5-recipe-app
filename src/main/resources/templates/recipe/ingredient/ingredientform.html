@@ -32,15 +32,15 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-3 form-group">
-                                    <label>Description</label>
+                                    <label>Description:</label>
                                     <input type="text" class="form-control" th:field="*{description}">
                                 </div>
                                 <div class="col-md-3 form-group">
-                                    <label>Amount</label>
+                                    <label>Amount:</label>
                                     <input type="number" class="form-control" th:field="*{amount}">
                                 </div>
                                 <div class="col-md-3 form-group">
-                                    <label>UOM</label>
+                                    <label>UOM:</label>
                                     <select class="form-control" name="uom.id">
                                         <option th:each="uomEach : ${uomList}"
                                                 th:value="${uomEach.id}"
