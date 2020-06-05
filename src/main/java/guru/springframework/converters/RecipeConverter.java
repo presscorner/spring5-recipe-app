@@ -41,6 +41,7 @@ public class RecipeConverter extends Converter<RecipeCommand, Recipe> {
         recipeCommand.setUrl(recipe.getUrl());
         recipeCommand.setDirections(recipe.getDirections());
         recipeCommand.setNotes(notesConverter.convertFromEntity(recipe.getNotes()));
+        recipeCommand.setImage(recipe.getImage());
 
         if (!recipe.getCategories().isEmpty()) {
             recipe.getCategories().forEach((Category category) -> recipeCommand.getCategories().add(categoryConverter.convertFromEntity(category)));
@@ -71,6 +72,7 @@ public class RecipeConverter extends Converter<RecipeCommand, Recipe> {
         recipe.setUrl(recipeCommand.getUrl());
         recipe.setDirections(recipeCommand.getDirections());
         recipe.setNotes(notesConverter.convertFromCommand(recipeCommand.getNotes()));
+        recipe.setImage(recipeCommand.getImage());
 
         if (!recipeCommand.getCategories().isEmpty()) {
             recipeCommand.getCategories().forEach((CategoryCommand categoryCommand) -> recipe.getCategories().add(categoryConverter.convertFromCommand(categoryCommand)));
